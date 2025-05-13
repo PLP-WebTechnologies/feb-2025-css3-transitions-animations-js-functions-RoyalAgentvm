@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Animations & Local Storage Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Animation & Preferences Dashboard</h1>
+        <div class="theme-switch-wrapper">
+            <span class="theme-label">Theme:</span>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="animation-showcase">
+            <h2>CSS3 Animation Showcase</h2>
+            <div class="animation-container">
+                <div class="animation-box bounce" id="box1">Bounce</div>
+                <div class="animation-box pulse" id="box2">Pulse</div>
+                <div class="animation-box shake" id="box3">Shake</div>
+                <div class="animation-box flip" id="box4">Flip</div>
+            </div>
+            <div class="controls">
+                <button id="play-all" class="btn-animated">Play All</button>
+                <button id="pause-all" class="btn-animated">Pause All</button>
+            </div>
+        </section>
+
+        <section class="user-preferences">
+            <h2>User Preferences</h2>
+            <div class="preferences-panel">
+                <div class="preference-group">
+                    <h3>Accent Color</h3>
+                    <div class="color-options">
+                        <div class="color-option" data-color="#4a6cf7" style="background-color: #4a6cf7;"></div>
+                        <div class="color-option" data-color="#f74a6c" style="background-color: #f74a6c;"></div>
+                        <div class="color-option" data-color="#4af76c" style="background-color: #4af76c;"></div>
+                        <div class="color-option" data-color="#f7d54a" style="background-color: #f7d54a;"></div>
+                        <div class="color-option" data-color="#9b4af7" style="background-color: #9b4af7;"></div>
+                    </div>
+                </div>
+                
+                <div class="preference-group">
+                    <h3>Animation Speed</h3>
+                    <div class="slider-container">
+                        <input type="range" min="0.5" max="2" step="0.1" value="1" id="speed-slider">
+                        <span id="speed-value">1x</span>
+                    </div>
+                </div>
+                
+                <div class="preference-group">
+                    <h3>Your Name</h3>
+                    <input type="text" id="user-name" placeholder="Enter your name">
+                </div>
+                
+                <button id="save-preferences" class="btn-animated">Save Preferences</button>
+            </div>
+        </section>
+        
+        <section class="interactive-element">
+            <h2>Interactive Animation</h2>
+            <div class="card-container">
+                <div class="card" id="flip-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Click to Flip</h3>
+                            <p>See what's on the other side!</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Welcome Back!</h3>
+                            <p id="user-greeting">Your preferences have been saved!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for CSS3 Transitions, Animations & Advanced JavaScript Functions Assignment</p>
+        <p id="last-visit">Last visit: Never</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
